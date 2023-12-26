@@ -1,3 +1,5 @@
+# This is a Practice using React to build a AG-Grid with MUI CSS
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
