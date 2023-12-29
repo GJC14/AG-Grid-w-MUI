@@ -1,10 +1,12 @@
 // https://www.youtube.com/watch?v=tKApfSoDPgM&list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO&index=8
 import { Box, TextField, MenuItem } from '@mui/material'; // Box is just for demo; TexField contains the input; MenuItem is for the dropdown
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export const MuiSelect = () => {
     const [countries, setCountries] = useState([]);
-    console.log({ countries });
+    useEffect(() => {
+        console.log(countries)
+      }, [countries])
 
     return (
         <Box width='500px'>
@@ -21,6 +23,8 @@ export const MuiSelect = () => {
                 SelectProps={{
                     multiple: true,
                 }}
+                error
+                helperText='Please select at least one country'
             >
                 <MenuItem value='US'>USA</MenuItem>
                 <MenuItem value='CA'>Canada</MenuItem>
